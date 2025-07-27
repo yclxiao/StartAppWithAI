@@ -5,4 +5,4 @@ AI应用开发入门
 
 半支烟提供**1V1技术咨询**，助你扫清职业发展和技术道路上的障碍，欢迎加V(yclxiao)咨询。
 
-![](https://img.mangod.top/blog/202408110713483.png)
+![](https://img.mangoant.top/blog/202408110713483.png)

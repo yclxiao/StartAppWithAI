@@ -47,11 +47,11 @@ Prompt是一种指令或提示，它告诉AI系统我们期望它做什么，或
     - 如果你是创作故事，你要告诉AI，故事情节的走向。
     - 如果AI写的东西太宽泛，你可以让AI输出的内容更形象（比如，字数不够让他继续写、比如让他举例子和口语化）。
 
-    ![](https://img.mangod.top/blog/202405171632224.png)
+    ![](https://img.mangoant.top/blog/202405171632224.png)
 
     
 
-    ![](https://img.mangod.top/blog/202405171640727.png)
+    ![](https://img.mangoant.top/blog/202405171640727.png)
 2. **AI生成提示词**：如果你不知道什么样的提示词合适，你可以让AI帮你生成提示词。
 3. **角色扮演**：在与AI的交互中，可以要求AI扮演一个指定的角色，我们将角色描述得更具体，AI就能提供更准确的答案。
     - 比如，我们要求AI扮演一个“Java开发专家”，AI就能够结合该角色，提供更专业的编程技术解决方案。
@@ -60,11 +60,11 @@ Prompt是一种指令或提示，它告诉AI系统我们期望它做什么，或
 5. **使用常用的分隔符**：在处理长文本时，可以添加分隔符，让AI更好的理解输入的内容。比如让AI总结（`"""`、`<xml>`）里的内容。
 6. **根据少量样本生成内容**：让AI根据你给的一些例子，生成内容。看下以下2个截图的对比。
 
-    ![](https://img.mangod.top/blog/202405171631750.png)
+    ![](https://img.mangoant.top/blog/202405171631750.png)
 
     
 
-    ![](https://img.mangod.top/blog/202405171533673.png)
+    ![](https://img.mangoant.top/blog/202405171533673.png)
 7. **保持耐心**：**保持耐心**，**保持耐心**，**保持耐心**，重要的内容说3遍，AI生成内容并不是一蹴而就的，想生成一篇合适的文章，需要与AI进行多轮有效对话。
 
 总之，以上总总，都不是一门收费课程能教会你的，更多的是需要你自己的实践和练习。
@@ -112,13 +112,13 @@ AI以极高的效率和输出质量，得到了许多写作人的青睐，Prompt
 
 以下是一个让ChatGPT教人如何偷取摩托车的案例。
 
-![](https://img.mangod.top/blog/202408182118101.png)
+![](https://img.mangoant.top/blog/202408182118101.png)
 
 #### 2.1.2、Kimi被诱导
 
 Kimi在诱导犯罪这块做了更多的防护，按照以上方法，前三轮对话都没有诱导成功，但最终通过伪装成受害者诱导成功了。
 
-![](https://img.mangod.top/blog/202408182130423.png)
+![](https://img.mangoant.top/blog/202408182130423.png)
 
 ### 2.2、提示词注入
 
@@ -146,7 +146,7 @@ Kimi在诱导犯罪这块做了更多的防护，按照以上方法，前三轮�
 
 如果这个LLM应用，没有做安全防护，那它可能就真的按照错误的意思输出了。这个过程，就是提示词注入攻击。演示效果如下：
 
-![](https://img.mangod.top/blog/202408190637249.png)
+![](https://img.mangoant.top/blog/202408190637249.png)
 
 
 
@@ -158,7 +158,7 @@ Kimi在诱导犯罪这块做了更多的防护，按照以上方法，前三轮�
 
 提示注入与 SQL 注入类似，这两种攻击都会将恶意命令伪装成用户输入，从而向应用程序发送恶意指令。两者的主要区别在于，SQL 注入针对的是数据库，而提示词注入针对的是 LLM。 
 
-![](https://img.mangod.top/blog/202408190731187.png)
+![](https://img.mangoant.top/blog/202408190731187.png)
 
 ### 2.3、危害和防御
 
@@ -262,7 +262,7 @@ for inputvar in prompt_input_variables:
 
 执行结果如下：
 
-![](https://img.mangod.top/blog/202405220955485.png)
+![](https://img.mangoant.top/blog/202405220955485.png)
 
 
 
@@ -270,7 +270,7 @@ for inputvar in prompt_input_variables:
 
 如果碰到复杂场景，需要模型接入各种工具时，就要写复杂的提示词了，比如类似这样这个链接里的提示词模板。这么复杂的提示词写起来就有点尴尬了，幸好有LangChainHub。[https://smith.langchain.com/hub/hwchase17/structured-chat-agent?organizationId=6e7cb68e-d5eb-56c1-8a8a-5a32467e2996](https://smith.langchain.com/hub/hwchase17/structured-chat-agent?organizationId=6e7cb68e-d5eb-56c1-8a8a-5a32467e2996)。
 
-![](https://img.mangod.top/blog/202405221022108.png)
+![](https://img.mangoant.top/blog/202405221022108.png)
 
 
 

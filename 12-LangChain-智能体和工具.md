@@ -12,7 +12,7 @@ AI Agent，经常被翻译为：智能体或代理。一句话总结，AI Agent�
 
 为什么我们需要AI Agent呢？其实说到底是因为**单一的模型对我们来说作用不大**，我们需要的是一个具备智能的复杂系统。只有复杂系统才能真正的应用到实际生产工作中。
 
-![](https://img.mangod.top/blog/202406032326549.png)
+![](https://img.mangoant.top/blog/202406032326549.png)
 
 ### 1.2、从单一模型到复合AI系统
 
@@ -200,9 +200,9 @@ agent.run("你帮我算下 3.941592623412424 + 4.3434532535353的结果")
 
 执行过程见下图，从过程中，我们可以看出，Agent确实是先规划了N个`steps`，然后一步步执行`step`。
 
-![](https://img.mangod.top/blog/202408151045798.png)
+![](https://img.mangoant.top/blog/202408151045798.png)
 
-![](https://img.mangod.top/blog/202408151045961.png)
+![](https://img.mangoant.top/blog/202408151045961.png)
 
 #### 2.3.2、ReAct机制
 
@@ -275,17 +275,17 @@ ReAct机制的执行过程，读者自行尝试。与Plan-and-Executor相比，R
 
 比如，在不使用ReAct机制借助外部工具的情况下，让LLM帮我们计算两个小数相加，则直接出错。
 
-![](https://img.mangod.top/blog/202406032006313.png)
+![](https://img.mangoant.top/blog/202406032006313.png)
 
 然后，借助ReAct机制，会让LLM自动使用自定义工具，最终计算正确。
 
-![](https://img.mangod.top/blog/202406032017436.png)
+![](https://img.mangoant.top/blog/202406032017436.png)
 
-![](https://img.mangod.top/blog/202406032018634.png)
+![](https://img.mangoant.top/blog/202406032018634.png)
 
 然后，继续测试，问别的问题，借助ReAct机制，则不会使用到工具，直接给出答案。
 
-![](https://img.mangod.top/blog/202406032024192.png)
+![](https://img.mangoant.top/blog/202406032024192.png)
 
 ### 3.2、代码
 
@@ -361,7 +361,7 @@ LLM（大模型）如果没有使用工具的能力，那就相当于一个有�
 
 所有的工具肯定要遵守一套规范，才能让LLM随意调用。为此，LangChain 抽象出一个`Tool 层`，只要是遵守这套规范的函数就是 `Tool` 对象，就可以被 LLM调用。
 
-![](https://img.mangod.top/blog/202406290731770.png)
+![](https://img.mangoant.top/blog/202406290731770.png)
 
 #### 4.2.1、Tool规范
 
@@ -416,7 +416,7 @@ dalle_image_generator = Tool(
 
 这里的`DallEAPIWrapper(model="dall-e-3").run`方法就是个函数，实际是去调用了OpenAI的接口。
 
-![](https://img.mangod.top/blog/202406290739397.png)
+![](https://img.mangoant.top/blog/202406290739397.png)
 
 #### 4.3.3、代码执行器
 
@@ -568,7 +568,7 @@ agent_executor.invoke({"input": "你是谁？"})
 
 一起看下使用工具后，reAct的整个过程。
 
-![](https://img.mangod.top/blog/202406281831022.png)
+![](https://img.mangoant.top/blog/202406281831022.png)
 
 # 5、总结
 

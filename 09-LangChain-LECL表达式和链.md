@@ -8,7 +8,7 @@ LangChain几乎是LLM应用开发的第一选择，它的野心也比较大，�
 
 在LangChain里只要实现了`Runnable`接口，并且有`invoke`方法，都可以成为`链`。实现了`Runnable`接口的类，可以拿上一个链的输出作为自己的输入。
 
-![](https://img.mangod.top/blog/202405262304395.png)
+![](https://img.mangoant.top/blog/202405262304395.png)
 
 比如`ChatPromptTemplate` 、`ChatOpenAI` 、`PydanticOutputParser`等，都实现了`Runnable`接口，且都有`invoke`方法。
 
@@ -20,11 +20,11 @@ LangChain的Chain到底是什么？一句话总结：***Chain是指对 LangChain
 
 从下图官网的描述，也可以看到，Chain可以是从最简单的“prompt + LLM”链 到 最复杂的链（运行了包含 100 多个步骤的链）。
 
-![](https://img.mangod.top/blog/202406152238501.png)
+![](https://img.mangoant.top/blog/202406152238501.png)
 
 
 
-![](https://img.mangod.top/blog/202406152240311.png)
+![](https://img.mangoant.top/blog/202406152240311.png)
 
 
 
@@ -32,13 +32,13 @@ LangChain的Chain到底是什么？一句话总结：***Chain是指对 LangChain
 
 我们所期待的LLM是能处理许多复杂任务，而非简单的一问一答，也不是简单的处理单一任务。所以，最终我期待的LLM处理任务的流程应该是这样，它中间的复杂过程对用户来说是一个黑盒：
 
-![](https://img.mangod.top/blog/202406161031962.png)
+![](https://img.mangoant.top/blog/202406161031962.png)
 
 既然定位是完成复杂任务，那自然就需要通过某个机制将多个单一任务串起来，形成一个大的链条，多个步骤共同完成某个复杂任务。
 
 ***Chain可以将多个步骤连接到一起，最终完成各种复杂繁琐的任务。***这就是Chain存在的必要性了。我很喜欢LangChain的Logo，很形象地表达了这一思想。
 
-![](https://img.mangod.top/blog/202410131014013.png)
+![](https://img.mangoant.top/blog/202410131014013.png)
 
 Chain需要串联一系列的组件，才能完成复杂任务。当然，我们也可以把 Chain 看作是流水线。通过使用 Chain，你可以将各个步骤定义为独立的模块，然后按顺序串联起来。这样不仅大大简化了代码逻辑，也使得整个流程更加直观和易于管理。
 
@@ -190,7 +190,7 @@ LCEL是LangChain 表达式语言（LangChain Expression Language）的简称。�
 
 LCEL提供了多种方式将链组合起来，比如使用`管道符` `|`，这种方式既方便书写，表达力也很强劲。下图就是使用LCEL表达式的示例：
 
-![](https://img.mangod.top/blog/202405262259479.png)
+![](https://img.mangoant.top/blog/202405262259479.png)
 
 ### 2.2、使用区别
 
@@ -277,11 +277,11 @@ print(result)
 
 - **普通方式**：
 
-![](https://img.mangod.top/blog/202406161848187.png)
+![](https://img.mangoant.top/blog/202406161848187.png)
 
 - **LCEL方式**：
 
-![](https://img.mangod.top/blog/202406161849832.png)
+![](https://img.mangoant.top/blog/202406161849832.png)
 
 
 
@@ -324,17 +324,17 @@ LangChain为了让组件能以LCEL的方式快速简洁的被调用，计划将�
 
 那对应到***LangChain***的Runnable接口里，这个`or`运算是怎么实现的呢？一起看到源码：
 
-![](https://img.mangod.top/blog/202407291716086.png)
+![](https://img.mangoant.top/blog/202407291716086.png)
 
 LangChain通过`or`将所有的Runnable串联起来，在通过`invoke`去一个个执行，上一个组件的输出，作为下一个组件的输入。
 
-![](https://img.mangod.top/blog/202408011937155.png)
+![](https://img.mangoant.top/blog/202408011937155.png)
 
 LangChain这风格怎么有点像神经网络呀，不得不说，这个世界到处都是相似的草台班子。嗨！
 
 总结起来讲就是：LangChain的每个组件都实现了Runnable，通过LCEL方式，将多个组件串联到一起，最后一个个执行每个组件的invoke方法。上一个组件的输出是下一个组件的输入。
 
-![](https://img.mangod.top/blog/202406161031962.png)
+![](https://img.mangoant.top/blog/202406161031962.png)
 
 ### 2.5、Runnable的含义和应用场景
 
@@ -514,13 +514,13 @@ final_chain.invoke({"input":"对y=x求导的结果是多少？"})
 
 **路由链（RouterChain）**是由LLM根据输入的Prompt去选择具体的某个链。路由链中一般会存在多个Prompt，Prompt结合LLM决定下一步选择哪个链。
 
-![](https://img.mangod.top/blog/202406202304175.png)
+![](https://img.mangoant.top/blog/202406202304175.png)
 
 ### 3.2、路由链的使用场景
 
 路由链一般涉及到2个核心类，`LLMRouterChain`和`MultiPromptChain`，一起看看官网介绍：
 
-![](https://img.mangod.top/blog/202406200900004.png)
+![](https://img.mangoant.top/blog/202406200900004.png)
 
 - **LLMRouterChain**：使用LLM路由到可能的选项中。
 - **MultiPromptChain**：该链可用于在多个提示词之间路由输入，当你有多个提示词并且只想路由到其中一个时，可以用这个链。
@@ -631,11 +631,11 @@ multi_prompt_chain.invoke("将以下英文翻译成中文，只输出中文翻�
 
 执行结果跟我们预想的一致，执行结果如下：
 
-![](https://img.mangod.top/blog/202406201040966.png)
+![](https://img.mangoant.top/blog/202406201040966.png)
 
-![](https://img.mangod.top/blog/202406201040824.png)
+![](https://img.mangoant.top/blog/202406201040824.png)
 
-![](https://img.mangod.top/blog/202406201041851.png)
+![](https://img.mangoant.top/blog/202406201041851.png)
 
 
 
@@ -649,7 +649,7 @@ multi_prompt_chain.invoke("将以下英文翻译成中文，只输出中文翻�
 
 其实，转换链的设计也很精妙，从源码可以看出，它只是做了一条链，然后具体的任务完全丢给了外部的函数来实现。在LangChain里只要是链，就可以随处链接。
 
-![](https://img.mangod.top/blog/202406231708340.png)
+![](https://img.mangoant.top/blog/202406231708340.png)
 
 ### 4.2、转换链的使用场景
 

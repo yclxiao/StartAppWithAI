@@ -14,7 +14,7 @@ LLM 的本质是基于统计和概率来生成文本，对于每次请求，它�
 
 当我们与 LLM 聊天时，它们无法记住上下文信息，比如下图的示例：
 
-![](https://img.mangod.top/blog/202406111642618.png)
+![](https://img.mangoant.top/blog/202406111642618.png)
 
 ## 2、记忆组件的原理
 
@@ -26,13 +26,13 @@ LLM 的本质是基于统计和概率来生成文本，对于每次请求，它�
 2. 将历史消息填充到Prompt里。
 3. 对话结束后，继续将历史消息保存到到memory记忆中。
 
-![](https://img.mangod.top/blog/202407090806494.png)
+![](https://img.mangoant.top/blog/202407090806494.png)
 
 ### 2.2、示例
 
 如果将已有信息放入到 memory 中，每次跟 LLM 对话时，把已有的信息丢给 LLM，那么 LLM 就能够正确回答，见如下示例：
 
-![](https://img.mangod.top/blog/202406111645709.png)
+![](https://img.mangoant.top/blog/202406111645709.png)
 
 目前业内解决 LLM 记忆问题就是采用了类似上图的方案，即：**将每次的对话记录再次丢入到 Prompt 里**，这样 LLM 每次对话时，就拥有了之前的历史对话信息。
 
@@ -65,7 +65,7 @@ Langchain 提供了 `ConversationBufferMemory` 类，可以用来存储和管理
 
 每次往`ConversationBufferMemory`组件里存入对话信息时，都会存储到`history`的变量里。
 
-![](https://img.mangod.top/blog/202406111811838.png)
+![](https://img.mangoant.top/blog/202406111811838.png)
 
 ### 3.2、利用 MessagesPlaceholder 手动添加 history
 
@@ -110,7 +110,7 @@ res = chain.invoke({"user_input": "我们聊得最后一个问题是什么？", 
 
 执行结果如下：
 
-![](https://img.mangod.top/blog/202406120656199.png)
+![](https://img.mangoant.top/blog/202406120656199.png)
 
 ### 3.3、利用 ConversationChain 自动添加 history
 
@@ -136,7 +136,7 @@ res['response']
 
 执行结果如下，可以看到利用`ConversationChain`对话链，可以让 LLM 快速拥有记忆：
 
-![](https://img.mangod.top/blog/202406112300609.png)
+![](https://img.mangoant.top/blog/202406112300609.png)
 
 ### 3.4、对话链结合 PromptTemplate 和 MessagesPlaceholder
 
@@ -167,7 +167,7 @@ res['response']
 
 ```
 
-![](https://img.mangod.top/blog/202406112311465.png)
+![](https://img.mangoant.top/blog/202406112311465.png)
 
 ### 3.5、使用长期记忆
 
@@ -229,11 +229,11 @@ LLM 的回答如下，同时关闭 session 后，直接再次提问最后一个�
 
 只要`configurable`配置的`session_id`能对应上，LLM 就能给出正确答案。
 
-![](https://img.mangod.top/blog/202406112333048.png)
+![](https://img.mangoant.top/blog/202406112333048.png)
 
 然后，继续查看`redis`存储的数据，可以看到数据在` redis` 中是以 `list`的数据结构存储的。
 
-![](https://img.mangod.top/blog/202406112336183.png)
+![](https://img.mangoant.top/blog/202406112336183.png)
 
 
 
@@ -310,7 +310,7 @@ chain.predict(human_input="你知道我的名字吗？")
 
 `ChatPromptTemplate`主要用于聊天场景。`ChatPromptTemplate`有多角色，第一个是System角色，后续的是Human与AI角色。因为需要有记忆，所以之前的历史消息要放在最新问题的上方。
 
-![](https://img.mangod.top/blog/202407082318924.png)
+![](https://img.mangoant.top/blog/202407082318924.png)
 
 #### 4.2.2、使用MessagesPlaceholder安装记忆
 
@@ -435,9 +435,9 @@ chat_prompt = ChatPromptTemplate.from_messages(
 - `PromptTemplate`类型的模板，无需使用MessagesPlaceholder
 - `ChatPromptTemplate` 类型的聊天模板，需要使用MessagesPlaceholder。但是在使用ConversationChain时，可以省去创建ChatPromptTemplate的过程（也可以不省去）。省去和不省去在输出过程中有些区别，如下：
 
-    ![](https://img.mangod.top/blog/202407082309973.png)
+    ![](https://img.mangoant.top/blog/202407082309973.png)
 
-    ![](https://img.mangod.top/blog/202407082308770.png)
+    ![](https://img.mangoant.top/blog/202407082308770.png)
 
 
 

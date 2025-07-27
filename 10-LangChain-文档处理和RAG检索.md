@@ -12,9 +12,9 @@
 文档加载 → 文档分割 → 文档嵌入 → 向量化存储 → 文档检索 → 生成回答
 ```
 
-![](https://img.mangod.top/blog/202406142215549.png)
+![](https://img.mangoant.top/blog/202406142215549.png)
 
-![](https://img.mangod.top/blog/202406142229018.png)
+![](https://img.mangoant.top/blog/202406142229018.png)
 
 ## 2、文档处理
 
@@ -278,11 +278,11 @@ LLM存在幻觉问题，对于它不知道的知识会胡编乱造，可靠性�
 
 - 百度千帆平台是百度推出的基于大模型的一站式应用解决方案平台，提供先进的生成式AI生产及应用全流程开发工具链。**主打一个一站式。**百度深耕AI多年，也是国内最早推出一站式平台的，整体还算方便。
 
-![](https://img.mangod.top/blog/202407241346114.png)
+![](https://img.mangoant.top/blog/202407241346114.png)
 
 - FastGPT 是一个基于 LLM 大语言模型的知识库问答系统，提供开箱即用的数据处理、模型调用等能力。同时可以通过 Flow 可视化进行工作流编排，从而实现复杂的问答场景！**主打一个知识库问答。**
 
-![](https://img.mangod.top/blog/202407241347492.png)
+![](https://img.mangoant.top/blog/202407241347492.png)
 
 下面就两个主角在知识库问答领域的效果***做个比较***。
 
@@ -298,29 +298,29 @@ LLM存在幻觉问题，对于它不知道的知识会胡编乱造，可靠性�
 
 首页
 
-![](https://img.mangod.top/blog/202407241356634.png)
+![](https://img.mangoant.top/blog/202407241356634.png)
 
 创建知识库，将处理好的本地文档、网页、QA问答上传，然后利用词嵌入模型处理，再存入向量数据库。
 
-![](https://img.mangod.top/blog/202407241409222.png)
+![](https://img.mangoant.top/blog/202407241409222.png)
 
 创建AI应用
 
-![](https://img.mangod.top/blog/202407241413773.png)
+![](https://img.mangoant.top/blog/202407241413773.png)
 
 **百度千帆**
 
 首页：
 
-![](https://img.mangod.top/blog/202407241355376.png)
+![](https://img.mangoant.top/blog/202407241355376.png)
 
 创建知识库，将处理好的本地文档、网页、QA问答上传，然后利用词嵌入模型处理，再存入向量数据库。
 
-![](https://img.mangod.top/blog/202407241402411.png)
+![](https://img.mangoant.top/blog/202407241402411.png)
 
 创建AI应用
 
-![](https://img.mangod.top/blog/202407241414590.png)
+![](https://img.mangoant.top/blog/202407241414590.png)
 
 #### 5.3.2、可选词嵌入模型
 
@@ -328,7 +328,7 @@ LLM存在幻觉问题，对于它不知道的知识会胡编乱造，可靠性�
 
 **FastGPT**
 
-![](https://img.mangod.top/blog/202407241406979.png)
+![](https://img.mangoant.top/blog/202407241406979.png)
 
 
 
@@ -338,11 +338,11 @@ LLM存在幻觉问题，对于它不知道的知识会胡编乱造，可靠性�
 
 **FastGPT**
 
-![](https://img.mangod.top/blog/202407241427699.png)
+![](https://img.mangoant.top/blog/202407241427699.png)
 
 **百度千帆**
 
-![](https://img.mangod.top/blog/202407241428375.png)
+![](https://img.mangoant.top/blog/202407241428375.png)
 
 #### 5.3.4、可以发布到的渠道
 
@@ -350,13 +350,13 @@ LLM存在幻觉问题，对于它不知道的知识会胡编乱造，可靠性�
 
 **FastGPT**
 
-![](https://img.mangod.top/blog/202407241729128.png)
+![](https://img.mangoant.top/blog/202407241729128.png)
 
-![](https://img.mangod.top/blog/202407241433759.png)
+![](https://img.mangoant.top/blog/202407241433759.png)
 
 **百度千帆**
 
-![](https://img.mangod.top/blog/202407241728495.png)
+![](https://img.mangoant.top/blog/202407241728495.png)
 
 #### 5.3.5、最终的回答效果和体验
 
@@ -365,11 +365,11 @@ LLM存在幻觉问题，对于它不知道的知识会胡编乱造，可靠性�
 - FastGPT的对话框，历史对话消息不会丢失。但百度千帆的对话框刷新下，历史对话会丢失，这个体验感有点差。
 - 百度千帆的对话界面，不知道为什么非要突出老大一个图标和应用标题，几乎占了小半屏，导致对话内容的可见区域被压缩，此处我要@下百度的产品经理，请问你这么设计的目的是啥？
 
-![](https://img.mangod.top/blog/202407241441938.png)
+![](https://img.mangoant.top/blog/202407241441938.png)
 
 - 对比看下FastGPT就很简洁，对话区域也很大，用起来比较舒适。
 
-![](https://img.mangod.top/blog/202407241727277.png)
+![](https://img.mangoant.top/blog/202407241727277.png)
 
 - 百度千帆分享出去的网页必须要登录，这个有点恶心，没必要在这里强行拉一波注册吧。而FastGPT分享的网页免登即可使用。
 

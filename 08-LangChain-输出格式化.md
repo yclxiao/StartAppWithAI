@@ -6,7 +6,7 @@
 
 这时就需要在Prompt里设置好格式要求，然后LLM会在输出内容后，再将内容传给输出解析器，输出解析器会解析成我们预期的格式。
 
-![](https://img.mangod.top/blog/202405262252996.png)
+![](https://img.mangoant.top/blog/202405262252996.png)
 
 
 
@@ -19,7 +19,7 @@
 
 原理图如下：
 
-![](https://img.mangod.top/blog/202410111835769.png)
+![](https://img.mangoant.top/blog/202410111835769.png)
 
 ## 3、代码实践
 
@@ -68,7 +68,7 @@ print(ret)
 
 
 
-![](https://img.mangod.top/blog/202410111757297.png)
+![](https://img.mangoant.top/blog/202410111757297.png)
 
 
 
@@ -136,7 +136,7 @@ result = output_parser.invoke(response)
 print("对象======", result)
 ```
 
-![](https://img.mangod.top/blog/202410111812090.png)
+![](https://img.mangoant.top/blog/202410111812090.png)
 
 
 

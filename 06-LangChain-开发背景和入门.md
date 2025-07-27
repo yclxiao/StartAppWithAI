@@ -36,7 +36,7 @@ LangChain的架构设计有以下几个核心模块：
 
 这几点我们从官网的架构图清晰可见。
 
-![](https://img.mangod.top/blog/202406251501832.png)
+![](https://img.mangoant.top/blog/202406251501832.png)
 
 ## 3、LangChainHub简介
 
@@ -46,7 +46,7 @@ LangChain早期推出的各种组件中`LangChainHub`是其中一个比较有意
 
 这个定位我们从之前的LangChainHub在github仓库上的目录可见一斑。
 
-![](https://img.mangod.top/blog/202406251345441.png)
+![](https://img.mangoant.top/blog/202406251345441.png)
 
 
 
@@ -200,7 +200,7 @@ LangChain内部提供了回调系统，类似于生命周期函数，或者hook�
 
 在代理服务网站上注册后，创建令牌，即可生成密钥，然后使用时，指定代理服务的host即可。如下：
 
-![](https://img.mangod.top/blog/202410091552339.png)
+![](https://img.mangoant.top/blog/202410091552339.png)
 
 ```Python
 model = ChatOpenAI(
@@ -267,7 +267,7 @@ uvicorn server:app --host 0.0.0.0 --port 8990
 
 部署后，浏览器访问[http://localhost:8990/docs](http://localhost:8990/docs)，执行chat方法，可以拿到问答结果，效果如下：
 
-![](https://img.mangod.top/blog/202410091456692.png)
+![](https://img.mangoant.top/blog/202410091456692.png)
 
 
 
